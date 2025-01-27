@@ -7,7 +7,25 @@ The example is based on:
 - [Running Airflow 2.0 with Docker in 5 mins](https://youtu.be/aTaytcxy2Ck?feature=shared)
 - [Airflow DAG: Coding your first DAG for Beginnerss](https://youtu.be/IH1-0hwFZRQ?feature=shared)
 
-## Steps
+## Initialization Steps
+```shell
+mkdir airflow-example
+
+cd airflow-example
+curl -Lf0 'https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml' >> docker-compose.yaml
+
+code .
+
+mkdir ./dags ./plugins ./logs
+
+echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
+
+docker compose up airflow-init
+
+docker compose up
+```
+
+## Run Steps
 - Start Airflow
     ```shell
     cd airflow-example
