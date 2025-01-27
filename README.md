@@ -20,3 +20,10 @@ The example is based on:
 - Open Airflow UI at [http://localhost:8080](http://localhost:8080)
 - User credentials `airflow` / `airflow`
 - Example DAG at [http://localhost:8080/dags/my_dag](http://localhost:8080/dags/my_dag)
+
+## Airflow API
+API Reference [here](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html).
+
+| Description | URL | Example |
+| -- | -- | -- |
+| Get all DAGs |[http://localhost:8080/api/v1/dags](http://localhost:8080/api/v1/dags) | `curl -X GET --user "airflow:airflow" http://localhost:8080/api/v1/dags` |
