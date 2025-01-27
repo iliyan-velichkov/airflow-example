@@ -7,7 +7,8 @@ The example is based on:
 - [Running Airflow 2.0 with Docker in 5 mins](https://youtu.be/aTaytcxy2Ck?feature=shared)
 - [Airflow DAG: Coding your first DAG for Beginnerss](https://youtu.be/IH1-0hwFZRQ?feature=shared)
 
-## Initialization Steps
+## Steps
+### Initialization Steps
 ```shell
 mkdir airflow-example
 
@@ -25,7 +26,7 @@ docker compose up airflow-init
 docker compose up
 ```
 
-## Run Steps
+### Run Steps
 - Start Airflow
     ```shell
     cd airflow-example
@@ -38,6 +39,13 @@ docker compose up
 - Open Airflow UI at [http://localhost:8080](http://localhost:8080)
 - User credentials `airflow` / `airflow`
 - Example DAG at [http://localhost:8080/dags/my_dag](http://localhost:8080/dags/my_dag)
+
+### Stop Steps
+```shell
+docker compose stop
+
+docker compose down
+```
 
 ## Airflow API
 API Reference [here](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html).
